@@ -1,0 +1,9 @@
+.text-input {
+  min-height: 40px;
+  min-width: 200px;
+  border: none;
+  border-radius: 999px;
+  outline: none;
+  padding: 0px 24px;
+  font-size: medium;
+}

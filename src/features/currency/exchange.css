@@ -1,0 +1,47 @@
+.exchange {
+  border: 1px solid #e4e4e4;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.exchange__box {
+  height: 52px;
+  width: 480px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 32px 12px;
+  position: relative;
+}
+.exchange__box--top {
+  background-color: #ffffff;
+}
+.exchange__box--bottom {
+  background-color: #e4e4e4;
+}
+.exchange__box--bottom--select {
+  background-color: #e4e4e4;
+}
+.exchange__box--bottom--input {
+  background-color: #e4e4e4;
+}
+.exchange__button {
+  margin: 20px 0px;
+  width: 200px;
+}
+.exchange__box--center-button {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+.exchange__box--left-button {
+  position: absolute;
+  bottom: -20px;
+  left: 20px;
+  min-width: 40px;
+  z-index: 10;
+}

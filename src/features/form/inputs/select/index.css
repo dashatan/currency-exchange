@@ -1,0 +1,10 @@
+.select {
+  min-height: 40px;
+  min-width: 80px;
+  border: none;
+  border-radius: 999px;
+  outline: none;
+  padding: 0px 12px;
+  font-size: medium;
+  cursor: pointer;
+}
