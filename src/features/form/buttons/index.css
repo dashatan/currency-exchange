@@ -1,0 +1,27 @@
+.button {
+  min-height: 40px;
+  min-width: 150px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all ease-in-out 300ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button__secondary {
+  background-color: #f8fdff;
+  border: 2px solid #6495ad;
+  color: rgb(70, 70, 70);
+}
+
+.button__secondary:hover {
+  background-color: #e0f6ff;
+}
+.button__primary {
+  background-color: #6495ad;
+  color: aliceblue;
+  border: none;
+}
+.button__primary:hover {
+  background-color: #4e7487;
+}

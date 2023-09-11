@@ -17,9 +17,9 @@ export default function PriceInput(props: PriceInputProps) {
     <div className="price">
       {props.Prefix}
       <TextInput
+        value={typeof value === "number" ? formatPrice(value) : value}
         {...props}
         onChange={(e) => handleChange(e.target.value)}
-        value={typeof value === "number" ? formatPrice(value) : value}
         className={"price__input " + props.className}
       />
       {props.Currency && (
