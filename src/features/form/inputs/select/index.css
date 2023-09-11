@@ -1,4 +1,9 @@
 .select {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.select__input {
   min-height: 40px;
   min-width: 80px;
   border: none;
@@ -7,4 +12,7 @@
   padding: 0px 12px;
   font-size: medium;
   cursor: pointer;
+}
+.select__helper-text{
+  color: gray;
 }
