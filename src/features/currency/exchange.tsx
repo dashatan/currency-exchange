@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../store/store";
 import PrimaryButton from "../form/buttons/primary";
 import SecondaryButton from "../form/buttons/secondary";
@@ -13,7 +13,9 @@ import { WalletSlice } from "./slices/wallet";
 
 export default function Exchange() {
   const dispatch = useAppDispatch();
-  const { data: latestRates } = useGetLatestRatesQuery();
+  const { data: latestRates } = useGetLatestRatesQuery(undefined, {
+    pollingInterval: 10000,
+  });
   const store = useAppSelector((x) => x);
   const { signs } = store.wallet;
   const balances = store.wallet.balances || {};
@@ -33,6 +35,11 @@ export default function Exchange() {
   const { from, to, fromPrice, toPrice } = currencies;
   const [rate, setRate] = useState(rates[to]);
   const [count, setCount] = useState(0);
+  
+  useEffect(() => {
+    const newRate = change({ from, to, rates, val: 1 });
+    setRate(newRate);
+  }, [rates]);
 
   async function handleFromCurrencyChange(val: string) {
     const newRate = change({ from: val, to, rates, val: 1 });
