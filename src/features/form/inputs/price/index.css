@@ -1,0 +1,17 @@
+.price {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.price__currency {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 10px;
+}
+
+.price__input {
+  text-align: end;
+  padding: 0px 2px;
+}
